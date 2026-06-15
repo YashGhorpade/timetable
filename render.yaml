@@ -1,0 +1,66 @@
+services:
+  - type: web_service
+    name: timetable-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    plan: starter
+    instanceType: starter
+    healthCheckPath: /health
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
+    envVars:
+      - key: DATABASE_URL
+        value: "mssql+pyodbc://sa:${SA_PASSWORD}@timetable-mssql:1433/timetable_db?driver=ODBC+Driver+18+for+SQL+Server&TrustServerCertificate=yes&Connection+Timeout=30&Encrypt=no"
+      - key: REDIS_URL
+        value: "redis://timetable-redis:6379"
+      - key: SECRET_KEY
+        value: "replace-with-strong-secret"
+      - key: ALGORITHM
+        value: "HS256"
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: REFRESH_TOKEN_EXPIRE_DAYS
+        value: "7"
+      - key: ENVIRONMENT
+        value: "production"
+      - key: CORS_ORIGINS
+        value: '["https://timetable-frontend.onrender.com","https://timetable-backend.onrender.com"]'
+      - key: MSSQL_SA_PASSWORD
+        value: "ReplaceWithStrongPassword"
+    dependsOn:
+      - timetable-mssql
+      - timetable-redis
+
+  - type: web_service
+    name: timetable-frontend
+    env: docker
+    dockerfilePath: frontend/Dockerfile
+    plan: starter
+    instanceType: starter
+    healthCheckPath: /
+    args:
+      VITE_API_URL: "https://timetable-backend.onrender.com"
+      VITE_WS_URL: "wss://timetable-backend.onrender.com"
+    envVars:
+      - key: NODE_ENV
+        value: production
+    dependsOn:
+      - timetable-backend
+
+  - type: private_service
+    name: timetable-redis
+    env: docker
+    plan: starter
+    instanceType: starter
+    image: redis:7-alpine
+
+  - type: private_service
+    name: timetable-mssql
+    env: docker
+    plan: starter
+    instanceType: starter
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    envVars:
+      - key: ACCEPT_EULA
+        value: "Y"
+      - key: SA_PASSWORD
+        value: "ReplaceWithStrongPassword"
