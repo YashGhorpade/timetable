@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+*.so
+
+# Node
+node_modules/
+dist/
+.next/
+.nuxt/
+
+# Env
+.env
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
+
+# ML model (regenerated at runtime)
+backend/app/services/ai/xgb_timetable_scorer.json
+
+# OS
+.DS_Store
+Thumbs.db

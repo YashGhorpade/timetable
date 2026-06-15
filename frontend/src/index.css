@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface-0: #ffffff;
+    --surface-1: #f8fafc;
+    --surface-2: #f1f5f9;
+    --surface-3: #e2e8f0;
+  }
+
+  .dark {
+    --surface-0: #0f172a;
+    --surface-1: #1e293b;
+    --surface-2: #334155;
+    --surface-3: #475569;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-400 dark:bg-slate-600; }
+}
+
+@layer components {
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+  .font-mono    { font-family: 'JetBrains Mono', monospace; }
+
+  /* Timetable cell transitions */
+  .tt-cell-drop { @apply bg-blue-50 dark:bg-blue-900/20 ring-2 ring-inset ring-blue-400/60; }
+
+  /* ERP card */
+  .erp-card {
+    @apply bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-card;
+  }
+}

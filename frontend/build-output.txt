@@ -1,0 +1,119 @@
+﻿
+> timetable-frontend@1.0.0 build
+> tsc && vite build
+
+src/hooks/useSocket.ts(40,7): error TS2322: Type '"TRAINING_STARTED"' is not assignable to type 'WsEvent'.
+src/hooks/useSocket.ts(40,27): error TS2322: Type '"TRAINING_COMPLETED"' is not assignable to type 'WsEvent'.
+src/hooks/useSocket.ts(40,49): error TS2322: Type '"TRAINING_FAILED"' is not assignable to type 'WsEvent'.
+src/pages/admin/ClassroomsPage.tsx(48,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/ClassroomsPage.tsx(63,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/ClassroomsPage.tsx(77,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/ClassroomsPage.tsx(165,48): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, ClassroomFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, ClassroomFormValues, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/ClassroomsPage.tsx(165,76): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<ClassroomFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<ClassroomFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/ClassroomsPage.tsx(165,104): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, string, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, string, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, Error, string, unknown>; }> & { ...; }'.
+src/pages/admin/ClassroomsPage.tsx(176,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, ClassroomFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, ClassroomFormValues, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/ClassroomsPage.tsx(176,96): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<ClassroomFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<ClassroomFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/DepartmentsPage.tsx(47,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/DepartmentsPage.tsx(62,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/DepartmentsPage.tsx(76,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/DepartmentsPage.tsx(129,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/DepartmentsPage.tsx(131,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/DepartmentsPage.tsx(183,48): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, DepartmentFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, DepartmentFormValues, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/DepartmentsPage.tsx(183,76): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<DepartmentFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<DepartmentFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/DepartmentsPage.tsx(183,104): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, string, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, string, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, Error, string, unknown>; }> & { ...; }'.
+src/pages/admin/DepartmentsPage.tsx(194,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, DepartmentFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, DepartmentFormValues, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/DepartmentsPage.tsx(194,96): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<DepartmentFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<DepartmentFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/SectionsPage.tsx(50,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SectionsPage.tsx(65,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SectionsPage.tsx(79,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SectionsPage.tsx(187,50): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, SectionFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, SectionFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/SectionsPage.tsx(187,78): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SectionFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SectionFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/SectionsPage.tsx(187,106): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, string, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, string, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, Error, string, unknown>; }> & { ...; }'.
+src/pages/admin/SectionsPage.tsx(199,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, SectionFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, SectionFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/SectionsPage.tsx(199,96): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SectionFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SectionFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/SettingsPage.tsx(5,15): error TS2305: Module '"@/types"' has no exported member 'ConstraintConfig'.
+src/pages/admin/SettingsPage.tsx(97,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SettingsPage.tsx(108,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SettingsPage.tsx(166,84): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, any, { working_days: string; lectures_per_day: number; break_after_lectures: number; lecture_start_time: string; lecture_duration_min: number; ... 4 more ...; max_teacher_lectures_per_week: number; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, any, { working_days: string; lectures_per_day: number; break_after_lectures: number; lecture_start_time: string; lecture_duration_min: number; ... 4 more ...; max_teacher_lectures_per_week: number; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/SettingsPage.tsx(171,115): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, any, string | undefined, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, any, string | undefined, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, any, string | undefined, unknown>; }> & { ...; }'.
+src/pages/admin/SettingsPage.tsx(280,92): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, any, ConstraintConfig, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, any, ConstraintConfig, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, any, ConstraintConfig, unknown>; }> & { ...; }'.
+src/pages/admin/StudentsPage.tsx(67,43): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/StudentsPage.tsx(67,85): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/StudentsPage.tsx(73,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/StudentsPage.tsx(88,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/StudentsPage.tsx(102,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/StudentsPage.tsx(172,16): error TS2790: The operand of a 'delete' operator must be optional.
+src/pages/admin/StudentsPage.tsx(249,50): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, StudentFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, StudentFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/StudentsPage.tsx(249,78): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<StudentFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<StudentFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/StudentsPage.tsx(249,106): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, string, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, string, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, Error, string, unknown>; }> & { ...; }'.
+src/pages/admin/StudentsPage.tsx(261,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, StudentFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, StudentFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/StudentsPage.tsx(261,96): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<StudentFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<StudentFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/SubjectsPage.tsx(47,43): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/SubjectsPage.tsx(47,91): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/SubjectsPage.tsx(53,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SubjectsPage.tsx(68,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SubjectsPage.tsx(82,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/SubjectsPage.tsx(193,50): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, SubjectFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, SubjectFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/SubjectsPage.tsx(193,78): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SubjectFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SubjectFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/SubjectsPage.tsx(193,106): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, string, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, string, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, Error, string, unknown>; }> & { ...; }'.
+src/pages/admin/SubjectsPage.tsx(205,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, SubjectFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, SubjectFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/SubjectsPage.tsx(205,96): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SubjectFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<SubjectFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(85,43): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/TeachersPage.tsx(85,101): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+src/pages/admin/TeachersPage.tsx(97,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/TeachersPage.tsx(112,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/TeachersPage.tsx(126,28): error TS2559: Type 'string[]' has no properties in common with type 'InvalidateQueryFilters<readonly unknown[]>'.
+src/pages/admin/TeachersPage.tsx(199,16): error TS2790: The operand of a 'delete' operator must be optional.
+src/pages/admin/TeachersPage.tsx(265,50): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, TeacherFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, TeacherFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(265,78): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<TeacherFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<TeacherFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(265,106): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, string, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, string, unknown>, { mutate: UseMutateFunction<AxiosResponse<any, any, {}>, Error, string, unknown>; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(265,134): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, AssignmentFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, AssignmentFormValues, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(277,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, TeacherFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, TeacherFormValues, unknown>, { mutate: UseMutateFunction<...>; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(277,96): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<TeacherFormValues>; }, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, { id: string; payload: Partial<TeacherFormValues>; }, unknown>, { ...; }> & { ...; }'.
+src/pages/admin/TeachersPage.tsx(328,68): error TS2339: Property 'isLoading' does not exist on type 'UseMutationResult<AxiosResponse<any, any, {}>, Error, AssignmentFormValues, unknown>'.
+  Property 'isLoading' does not exist on type 'Override<MutationObserverIdleResult<AxiosResponse<any, any, {}>, Error, AssignmentFormValues, unknown>, { ...; }> & { ...; }'.
+src/pages/auth/ActivityPage.tsx(20,25): error TS2345: Argument of type '"TRAINING_STARTED"' is not assignable to parameter of type 'WsEvent'.
+src/pages/auth/ActivityPage.tsx(21,28): error TS2345: Argument of type '"TRAINING_COMPLETED"' is not assignable to parameter of type 'WsEvent'.
+src/pages/auth/ActivityPage.tsx(22,24): error TS2345: Argument of type '"TRAINING_FAILED"' is not assignable to parameter of type 'WsEvent'.
