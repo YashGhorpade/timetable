@@ -1,4 +1,4 @@
-services:
+=services:
   - type: web
     name: timetable-backend
     env: docker
@@ -45,13 +45,13 @@ services:
     dependsOn:
       - timetable-backend
 
-  - type: private_service
+  - type: pserv
     name: timetable-redis
     env: docker
     plan: starter
     image: redis:7-alpine
 
-  - type: private_service
+  - type: pserv
     name: timetable-mssql
     env: docker
     plan: starter
