@@ -15,7 +15,7 @@ COPY . .
 RUN npm run build
 
 # === Final stage: Create minimal runtime image ===
-FROM dhi.io/nginx:1.30-alpine
+FROM nginx:alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx-spa.conf /etc/nginx/conf.d/default.conf
