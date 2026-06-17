@@ -5,7 +5,6 @@ services:
     dockerfilePath: backend/Dockerfile
     plan: starter
     healthCheckPath: /health
-    startCommand: ./entrypoint.sh
     envVars:
       - key: ALGORITHM
         value: "HS256"
