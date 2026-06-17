@@ -1,10 +1,9 @@
 services:
-  - type: web_service
+  - type: web
     name: timetable-backend
     env: docker
     dockerfilePath: backend/Dockerfile
     plan: starter
-    instanceType: starter
     healthCheckPath: /health
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
     envVars:
@@ -31,12 +30,11 @@ services:
       - timetable-mssql
       - timetable-redis
 
-  - type: web_service
+  - type: web
     name: timetable-frontend
     env: docker
     dockerfilePath: frontend/Dockerfile
     plan: starter
-    instanceType: starter
     healthCheckPath: /
     buildArgs:
       VITE_API_URL: "https://timetable-backend.onrender.com"
@@ -51,18 +49,18 @@ services:
     name: timetable-redis
     env: docker
     plan: starter
-    instanceType: starter
     image: redis:7-alpine
 
   - type: private_service
     name: timetable-mssql
     env: docker
     plan: starter
-    instanceType: starter
     image: mcr.microsoft.com/mssql/server:2022-latest
     envVars:
       - key: ACCEPT_EULA
         value: "Y"
+      - key: MSSQL_PID
+        value: "Express"
     secretEnvVars:
       - key: SA_PASSWORD
         value: MSSQL_SA_PASSWORD
