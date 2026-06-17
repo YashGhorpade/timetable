@@ -24,9 +24,6 @@ services:
     dockerfilePath: frontend/Dockerfile
     plan: starter
     healthCheckPath: /
-    buildArgs:
-      VITE_API_URL: "https://timetable-backend.onrender.com"
-      VITE_WS_URL: "wss://timetable-backend.onrender.com"
     envVars:
       - key: NODE_ENV
-        value: production
+        value: "production"
