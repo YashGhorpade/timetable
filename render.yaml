@@ -1,29 +1,19 @@
-services:
-  - type: web
-    name: timetable-backend
-    env: docker
-    dockerfilePath: backend/Dockerfile
-    plan: starter
-    healthCheckPath: /health
-    envVars:
-      - key: ALGORITHM
-        value: "HS256"
-      - key: ACCESS_TOKEN_EXPIRE_MINUTES
-        value: "30"
-      - key: REFRESH_TOKEN_EXPIRE_DAYS
-        value: "7"
-      - key: ENVIRONMENT
-        value: "production"
-    secretEnvVars:
-      - key: DATABASE_URL
-      - key: SECRET_KEY
-
-  - type: web
-    name: timetable-frontend
-    env: docker
-    dockerfilePath: frontend/Dockerfile
-    plan: starter
-    healthCheckPath: /
-    envVars:
-      - key: NODE_ENV
-        value: "production"
+- type: web
+  name: timetable-backend
+  env: docker
+  dockerfilePath: backend/Dockerfile
+  plan: starter
+  healthCheckPath: /health
+  startCommand: ./entrypoint.sh
+  envVars:
+    - key: ALGORITHM
+      value: "HS256"
+    - key: ACCESS_TOKEN_EXPIRE_MINUTES
+      value: "30"
+    - key: REFRESH_TOKEN_EXPIRE_DAYS
+      value: "7"
+    - key: ENVIRONMENT
+      value: "production"
+  secretEnvVars:
+    - key: DATABASE_URL
+    - key: SECRET_KEY
