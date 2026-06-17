@@ -30,4 +30,4 @@ services:
       VITE_WS_URL: "wss://timetable-backend.onrender.com"
     envVars:
       - key: NODE_ENV
-        value: productions
+        value: production
