@@ -14,9 +14,6 @@ services:
         value: "7"
       - key: ENVIRONMENT
         value: "production"
-    secretEnvVars:
-      - key: DATABASE_URL
-      - key: SECRET_KEY
 
   - type: web
     name: timetable-frontend
