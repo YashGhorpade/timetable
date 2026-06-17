@@ -3,7 +3,7 @@ services:
     name: timetable-backend
     env: docker
     dockerfilePath: backend/Dockerfile
-    plan: starter
+    plan: free
     healthCheckPath: /health
     envVars:
       - key: ALGORITHM
@@ -19,7 +19,7 @@ services:
     name: timetable-frontend
     env: docker
     dockerfilePath: frontend/Dockerfile
-    plan: starter
+    plan: free
     healthCheckPath: /
     envVars:
       - key: NODE_ENV
