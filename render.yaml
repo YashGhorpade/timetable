@@ -7,8 +7,6 @@ services:
     healthCheckPath: /health
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
     envVars:
-      - key: REDIS_URL
-        value: "redis://timetable-redis:6379"
       - key: ALGORITHM
         value: "HS256"
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
@@ -17,18 +15,11 @@ services:
         value: "7"
       - key: ENVIRONMENT
         value: "production"
-      - key: CORS_ORIGINS
-        value: '["https://timetable-frontend.onrender.com","https://timetable-backend.onrender.com"]'
     secretEnvVars:
       - key: DATABASE_URL
         value: DATABASE_URL
       - key: SECRET_KEY
         value: SECRET_KEY
-      - key: MSSQL_SA_PASSWORD
-        value: MSSQL_SA_PASSWORD
-    dependsOn:
-      - timetable-mssql
-      - timetable-redis
 
   - type: web
     name: timetable-frontend
@@ -42,25 +33,3 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-    dependsOn:
-      - timetable-backend
-
-  - type: pserv
-    name: timetable-redis
-    env: docker
-    plan: starter
-    image: redis:7-alpine
-
-  - type: pserv
-    name: timetable-mssql
-    env: docker
-    plan: starter
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    envVars:
-      - key: ACCEPT_EULA
-        value: "Y"
-      - key: MSSQL_PID
-        value: "Express"
-    secretEnvVars:
-      - key: SA_PASSWORD
-        value: MSSQL_SA_PASSWORD
