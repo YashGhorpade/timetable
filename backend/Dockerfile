@@ -15,14 +15,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && ACCEPT_EULA=Y apt-get install -y --no-install-recommends msodbcsql18 mssql-tools18 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY backend/requirements.txt .
 ENV VIRTUAL_ENV=/opt/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN python -m venv "$VIRTUAL_ENV"
 RUN "$VIRTUAL_ENV/bin/pip" install --no-cache-dir -r requirements.txt
 
-COPY . .
-COPY entrypoint.sh /entrypoint.sh
+COPY backend/create_db.py ./
+COPY backend/create_schema.py ./
+COPY backend/drop_schema.py ./
+COPY backend/list_tables.py ./
+COPY backend/entrypoint.sh /entrypoint.sh
+COPY backend/alembic ./alembic
+COPY backend/app ./app
 RUN chmod +x /entrypoint.sh
 
 EXPOSE 8000

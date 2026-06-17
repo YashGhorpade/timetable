@@ -8,12 +8,8 @@ services:
     healthCheckPath: /health
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
     envVars:
-      - key: DATABASE_URL
-        value: "mssql+pyodbc://sa:${SA_PASSWORD}@timetable-mssql:1433/timetable_db?driver=ODBC+Driver+18+for+SQL+Server&TrustServerCertificate=yes&Connection+Timeout=30&Encrypt=no"
       - key: REDIS_URL
         value: "redis://timetable-redis:6379"
-      - key: SECRET_KEY
-        value: "replace-with-strong-secret"
       - key: ALGORITHM
         value: "HS256"
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
@@ -24,8 +20,13 @@ services:
         value: "production"
       - key: CORS_ORIGINS
         value: '["https://timetable-frontend.onrender.com","https://timetable-backend.onrender.com"]'
+    secretEnvVars:
+      - key: DATABASE_URL
+        value: DATABASE_URL
+      - key: SECRET_KEY
+        value: SECRET_KEY
       - key: MSSQL_SA_PASSWORD
-        value: "ReplaceWithStrongPassword"
+        value: MSSQL_SA_PASSWORD
     dependsOn:
       - timetable-mssql
       - timetable-redis
@@ -37,7 +38,7 @@ services:
     plan: starter
     instanceType: starter
     healthCheckPath: /
-    args:
+    buildArgs:
       VITE_API_URL: "https://timetable-backend.onrender.com"
       VITE_WS_URL: "wss://timetable-backend.onrender.com"
     envVars:
@@ -62,5 +63,6 @@ services:
     envVars:
       - key: ACCEPT_EULA
         value: "Y"
+    secretEnvVars:
       - key: SA_PASSWORD
-        value: "ReplaceWithStrongPassword"
+        value: MSSQL_SA_PASSWORD
